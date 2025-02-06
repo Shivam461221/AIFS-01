@@ -40,19 +40,3 @@ input {
     color: white;
 }
 
-.parent{
-    background-color: blue;
-    padding-top: 10px;
-}
-
-
-
-.parent>div{
-    
-    background-color: red;
-    border:2px solid black ;
-}
-
-h1~p{
-    color: white;
-}
