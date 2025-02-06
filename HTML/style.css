@@ -1,0 +1,18 @@
+.paragraph1{
+    background-color: blue;
+    color: white;
+}
+
+#div2{
+    background-color: yellow;
+    color: grey;
+}
+
+body{
+    background-color: darkred;
+}
+
+p{
+    font-size: 50px;
+    font-weight: bold;
+}
