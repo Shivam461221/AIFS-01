@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PsedoClass</title>
+    <style>
+        .navigation {
+            height: 80px;
+            background-color: blueviolet;
+            padding: 20px;
+        }
+
+        .navigation li {
+            display: inline;
+            color: white;
+            margin-right: 20px;
+            padding: 20px;
+            border-radius: 12px;
+            cursor: pointer;
+        }
+
+        ul li:hover {
+            background-color: ;
+        }
+        
+        .list li::before{
+            content: "";
+            
+        }
+
+
+        ul li:active {
+            background-color: yellow;
+        }
+
+        #form-div {
+            border: 2px solid black;
+            padding: 30px;
+        }
+
+        form input:focus {
+            background-color: red;
+            outline: 2px solid yellow;
+        }
+
+        ol>li {
+            background-color: green;
+        }
+
+        p+h1 {
+            background-color: brown;
+        }
+
+        p~h1 {
+            color: blue;
+        }
+
+        input[type="text"] {
+            font-size: 40px;
+        }
+
+        input[type="password"] {
+            font-weight: bold;
+            padding: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navigation">
+        <ul>
+            <li>Home
+            </li>
+            <li>CDEC</li>
+            <li>Training</li>
+            <li>Corporate Training</li>
+            <li>Career</li>
+        </ul>
+    </div>
+
+    <div id="form-div">
+        <form>
+            <label>Username</label>
+            <input type="text" placeholder="Username" />
+            <br>
+            <label>Password</label>
+            <input type="number" placeholder="Password">
+        </form>
+    </div>
+
+    <div class="Child">
+        <ol>
+            <li>Home</li>
+            <li>About</li>
+            <li>Career</li>
+            <li>Contact Us</li>
+        </ol>
+    </div>
+
+    <div class="sibling">
+        <p>It is a paragraph</p>
+        <h1>Sibling 1</h1>
+        <h1>Sibling 2</h1>
+        <a href="https://cloudblitz.in/">Click me</a>
+        <a href="https://cloudblitz.in/">Cloudblitz</a>
+    </div>
+
+    <div class="list">
+        <ul>
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+            <li>Four</li>
+        </ul>
+    </div>
+</body>
+
+</html>
+
+<!-- class, Id, Element, Pseudo-class, descendent, child,
+  sibling (Adjacent sibling, General sibling), attribute selector -->
