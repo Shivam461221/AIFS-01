@@ -16,19 +16,56 @@
             display: inline;
             color: white;
             margin-right: 20px;
-            padding: 20px;
+            padding: 5px;
             border-radius: 12px;
             cursor: pointer;
+            position: relative;
         }
 
-        ul li:hover {
-            background-color: ;
-        }
-        
-        .list li::before{
+        .navigation li::after {
             content: "";
-            
+            position: absolute;
+            height: 2px;
+            background-color: #ffff;
+            width: 100%;
+            left: 0%;
+            bottom: 0%;
+            transition: 0.7s ease;
+            transform: scaleX(0);
+            transform-origin: center;
         }
+        .navigation li::before {
+            content: "";
+            position: absolute;
+            height: 2px;
+            background-color: #ffff;
+            width: 100%;
+            left: 0%;
+            top: 0%;
+            transition: 0.7s ease;
+            transform: scaleX(0);
+            transform-origin: top center;
+        }
+
+        .navigation li:hover:before{
+            width:100%;
+            transform:scaleX(1);
+        }
+
+        .navigation li:hover:after{
+            width:100%;
+            transform:scaleX(1);
+        }
+
+        /* ul li:hover {
+            
+            text-decoration: underline overline;
+            text-decoration-color: #fdfefe;
+            
+            text-decoration-thickness: 2px;
+            
+            transition: text-decoration 1s ease-in-out;
+        } */
 
 
         ul li:active {
@@ -37,7 +74,7 @@
 
         #form-div {
             border: 2px solid black;
-            padding: 30px;
+            padding: 10px;
         }
 
         form input:focus {
@@ -58,18 +95,20 @@
         }
 
         input[type="text"] {
-            font-size: 40px;
+            font-size: 15px;
+            margin-bottom: 10px;
         }
 
         input[type="password"] {
-            font-weight: bold;
-            padding: 20px;
+           margin-top: 10px;
         }
 
         a {
             text-decoration: none;
             color: black;
         }
+
+        
     </style>
 </head>
 
