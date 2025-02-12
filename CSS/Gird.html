@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        .container {
+            border: 5px solid black;
+            height: 80vh;
+            display: grid;
+            grid-template-columns: auto auto auto;    /*3 columns */
+            /* grid-template-rows: 100px 100px 100px; */
+
+            grid-template-areas: "header header header"
+                "sidebar main main"
+                "footer footer footer"
+            ;
+            gap: 20px;
+            overflow: hidden;
+        }
+
+        .items {
+            border: 3px solid blue;
+            height: 100px;
+            /* width:100px; */
+            font-size: 25px;
+            padding: 10px;
+            text-align: center;
+            background-color: red;
+        }
+
+        .items-1 {
+            /* grid-column: 1/4;
+            grid-row: 1/2; */
+            grid-area: header;
+        }
+
+        .items-2 {
+            /* grid-row:2/3; */
+            grid-area: sidebar;
+        }
+
+        .items-3 {
+            /* grid-column: 2/4; */
+            grid-area: main;
+        }
+
+        .items-4 {
+            /* grid-column: 1/4; */
+            grid-area: footer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="items items-1">1 header
+        </div>
+        <div class="items items-2">2 sidebar</div>
+        <div class="items items-3">3 main</div>
+        <div class="items items-4">4 footer</div>
+        <!-- <div class="items items-1">5</div>
+        <div class="items items-2">6</div>
+        <div class="items items-3">7</div>
+        <div class="items items-4">8</div>
+        <div class="items items-4">9</div> -->
+
+    </div>
+</body>
+
+</html>
