@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position CSS</title>
+    <style>
+        .container{
+            height: 2000px;
+            border: 2px solid black;
+            padding: 10px;
+            position: relative;
+            color: white;
+        }
+
+        .box{
+            height: 100px;
+            border: 2px solid purple;
+        }
+
+        .box-1{
+            
+        }
+        .box-2{
+             position: relative; 
+        }
+        .box-3{
+
+        }
+        .box-4{
+            position: relative;
+        }
+
+        .circle{
+            border: 2px solid purple;
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: purple;
+            position: sticky;
+            top: 8px;
+            left: 40px; 
+        }
+
+        .circle-2{
+            border: 2px solid purple;
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: purple;
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+        }
+        .circle-3{
+            border: 2px solid purple;
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: purple;
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+        }
+        .circle-4{
+            border: 2px solid purple;
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: purple;
+            position: sticky;
+            top: 10px;
+            left:10px
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box-1">
+            <div class="circle">Circle</div>
+        </div>
+        <div class="box box-2">
+            <div class="circle-2">
+                circle 2
+            </div>
+        </div>
+        <div class="box box-3">Box-3
+            <div class="circle-3">Circle-3</div>
+        </div>
+        <div class="box box-4">Box-4
+            
+
+        </div>
+        <div class="circle-4">Circle-4 </div>
+    </div>
+</body>
+</html>
+
+<!-- relative- it postioned according to its normal position
+absolute - it postioned according to nearest postioned ancestor 
+Fixed - it postioned according to browser window
+Sticky - (relative + fixed ) 
+-->
