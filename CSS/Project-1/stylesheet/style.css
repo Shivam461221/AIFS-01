@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 .navbar {
@@ -41,6 +42,15 @@
 
 }
 
+.nav-options a{
+    text-decoration: none;
+    color: black;
+}
+
+.nav-options a:hover{
+    color: white;
+}
+
 .menu{
     width: 10%;
     font-size: 40px;
@@ -54,6 +64,20 @@
     /* justify-content: center; */
     flex-direction: column;
     align-items: center;
+}
+
+.home a{
+ text-decoration: none;
+ color: white;
+ background-color: #008cba;
+ padding: 10px;
+ border-radius: 10px;
+ transition: ease-out 1s;
+}
+
+.home a:hover{
+    background-color: #044a61;
+    box-shadow: 0 10px 10px 0 #008c;
 }
 
 .profile-pic{
@@ -99,6 +123,150 @@
     background-color: blue;
     transition: ease-in-out 1s;
 }
+.education{
+    height: 100vh;
+    display: flex;
+}
+.col-1{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.ed-heading{
+    font-size: 30px;
+    height: 100px;
+}
+
+.ed-heading span{
+    color: blue;
+}
+.col-2{
+width: 50%;
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+padding: 20px;
+border-left: 2px solid black;
+}
+
+.ed-items{
+    height: 100px;
+    border-radius: 15px;
+    background-color: #5465FF; 
+    transition: ease 1s;
+    padding: 10px;
+    position: relative;
+}
+
+.ed-items::before{
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: black;
+    border: 2px solid black;
+    top: 50px;
+    left: -28px;
+}
+
+.ed-items:hover{
+    box-shadow: 0px 10px 10px rgb(153, 42, 97);
+}
+
+.skills{
+    height: 100vh;
+    padding: 30px;
+   
+}
+
+.skills-container{
+    padding: 30px;
+    height: 70vh;
+    background-color: aquamarine;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.skill-items{
+    height: 100px;
+    background-color: #320D6D;
+    width: 300px;
+    padding: 20px;
+    font-size: 50px;
+    font-weight: bold;
+    border-radius: 15px;
+    color: white;
+    transition: ease-in-out 0.5s;
+    cursor: pointer;
+}
+
+.skill-items:hover{
+    background-color: #7748c2;
+    box-shadow: 0 10px 10px black;
+}
+
+.contact{
+    height: 90vh;
+
+
+}
+
+.contact form{
+    height: 400px;
+    padding: 100px;
+
+}
+
+.contact input{
+    width: 45%;
+    padding: 10px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.contact textarea{
+    width: 93%;
+    height: 100px;
+}
+
+.contact button{
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+    background-color: #5465FF;
+    color: white;
+}
+
+.footer{
+    height: 10vh;
+    background-color: aquamarine;
+    padding: 10px;
+    text-align: center;
+
+}
+
+.footer a{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #5465FF;
+    width: 35px;
+    height: 35px;
+    font-size: 35px;
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+
+}
+
+.contact button:hover{
+    background-color: #044a61;
+}
+
 @media only screen and (max-width:600px) {
     .nav-options {
         display: none;
@@ -110,10 +278,10 @@
     }
 }
 
-@media (min-width:600px) and (max-width:768px) {
+/* @media (min-width:600px) and (max-width:768px) {
     .nav-options {
-        /* display: none; */
-    }
+        display: none;
+    } */
 
     .nav-options ul li {
         display: inline-block;
@@ -123,4 +291,6 @@
     }
 }
 
-@media (min-width:768px) and (max-width:991px) {}
+@media (min-width:768px) and (max-width:991px) {
+
+}
