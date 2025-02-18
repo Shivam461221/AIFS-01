@@ -278,8 +278,8 @@ border-left: 2px solid black;
     }
 }
 
-/* @media (min-width:600px) and (max-width:768px) {
-    .nav-options {
+@media (min-width:600px) and (max-width:768px) {
+/*    .nav-options {
         display: none;
     } */
 
