@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="bootstrap.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        .form-container{
+            height: 400px;
+            width: 400px;
+            box-shadow: 5px 5px 10px 0 black;
+        }
+
+        span{
+            cursor: pointer;
+
+        }
+
+        .card{
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Form, Tables</h1>
+    <div class="container form-container  rounded-2 p-2 bg-hover-primary">
+        <form>
+        <h4>Log in</h4>
+        <label class="form-label text-hover-primary">Your Email</label>
+        <input type="email" class="form-control" placeholder="youremail@gmail.com" />
+        <label class="form-label">Password</label>
+        <input type="password" class="form-control" placeholder="*********" />
+        <input type="checkbox" class="m-1" />Remeber me  
+        <span class="small ms-5 text-primary">Forget Password</span>
+        <button class="btn btn-primary form-control mt-3">Log in</button>
+        <hr>
+        <button class="btn btn-secondary form-control"><i class='bx bxl-google me-2'></i>Log in with Google</button>
+        </form>
+    </div>
+
+    <div class="table-container mt-5">
+        <table border="2" class="table table-hover ">
+            <thead>
+                <tr class="table-dark">
+                    <th>S.no</th>
+                    <th>Name</th>
+                    <th>Class</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-danger">
+                    <td>1</td>
+                    <td>Sanket</td>
+                    <td>AIFS</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Shubham</td>
+                    <td>AIFS</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Pratham</td>
+                    <td>AIFS</td>
+                </tr>
+            </tbody>
+        </table>   
+    </div>
+    <div class="card-container d-flex justify-content-center align-items-center">
+        <div class="card" >
+            <img class="card-img-top" src="../Basic/img1.png" />
+            <div class="card-body">
+                <h1 class="card-title">Title</h1>
+                <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate, accusantium!</p>
+                <a class="btn btn-primary">Buy now</a>
+            </div>
+
+        </div>
+        <div class="card" >
+            <img class="card-img-top" src="../Basic/img1.png" />
+            <div class="card-body">
+                <h1 class="card-title">Title</h1>
+                <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate, accusantium!</p>
+                <a class="btn btn-primary">Buy now</a>
+            </div>
+
+        </div>
+        <div class="card" >
+            <img class="card-img-top" src="../Basic/img1.png" />
+            <div class="card-body">
+                <h1 class="card-title">Title</h1>
+                <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate, accusantium!</p>
+                <a class="btn btn-primary">Buy now</a>
+            </div>
+
+        </div>
+        <div class="card" >
+            <img class="card-img-top" src="../Basic/img1.png" />
+            <div class="card-body">
+                <h1 class="card-title">Title</h1>
+                <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate, accusantium!</p>
+                <a class="btn btn-primary">Buy now</a>
+            </div>
+
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">An item</li>
+          <li class="list-group-item">A second item</li>
+          <li class="list-group-item">A third item</li>
+        </ul>
+      </div>
+</body>
+</html>
