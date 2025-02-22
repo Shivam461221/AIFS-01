@@ -36,7 +36,11 @@ font-size: 80px;
 color: #0d6efd;
 }
 
-.row-1{
+.parent-row{
+    min-height:1200px;
+}
+
+.row-1, .row-2, .row-3{
     min-height: 400px;
 }
 
@@ -44,3 +48,57 @@ color: #0d6efd;
     background-image: url('	https://startbootstrap.github.io/startbootstrap-landing-page/assets/img/bg-showcase-1.jpg');
     background-size: cover;
 }
+
+.second-img{
+    background-image: url('	https://startbootstrap.github.io/startbootstrap-landing-page/assets/img/bg-showcase-2.jpg');
+    background-size: cover;
+}
+
+.feedback{
+    min-height: 500px;
+}
+
+.feedback p{
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.down-form{
+    min-height: 350px;
+    background-image: url('https://startbootstrap.github.io/startbootstrap-landing-page/assets/img/bg-masthead.jpg');
+    background-size: cover ;
+    
+}
+
+.footer{
+    height: 150px;
+}
+
+.input-box-2{
+    height: 350px;
+}
+
+.footer a{
+    margin-top: 30px;
+}
+
+.footer a i{
+    font-size: 40px;
+    margin-right: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    .row-1, .row-2, .row-3{
+        min-height: 800px;
+    }
+    .mobile-img{
+        /* background-image: url('	https://startbootstrap.github.io/startbootstrap-landing-page/assets/img/bg-showcase-1.jpg'); */
+        background-size: cover;
+        height: 400px;
+    }
+    .second-img{
+        /* background-image: url('	https://startbootstrap.github.io/startbootstrap-landing-page/assets/img/bg-showcase-2.jpg'); */
+        background-size: cover;
+        height: 400px;
+    }
+  }
