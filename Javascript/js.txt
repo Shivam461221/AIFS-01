@@ -1,0 +1,11 @@
+JS is a server side as well as client side scripting language
+It was initially known as livescript
+1993-94
+It is a dynamicaly typed scripting language
+It is very liberal language
+JS engine is responsible for execution of JS code
+Chrome - V8, Edge - Chakra, Mozilla - Spider monkey
+ECMAScript - standard JS (European Computer Manufacturer Association)
+Javascript is a high level programming language, it is a functional oriented as well as Object oriented programming language.
+
+
