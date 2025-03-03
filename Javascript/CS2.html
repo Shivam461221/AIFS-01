@@ -1,0 +1,23 @@
+<script>
+
+    const hour = new Date().getHours();  //24 hours format 
+
+    console.log(hour);
+
+    if (hour < 10) {
+        console.log('Good Morning');
+    } 
+    else 
+    if (hour < 18) {
+        console.log('Good day');
+    } 
+    else 
+    { 
+        if(hour<20){
+            console.log('Good evening');
+        }
+        else{
+            console.log('Good night');
+        }
+    }
+</script>
