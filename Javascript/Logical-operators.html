@@ -1,0 +1,55 @@
+<script>
+    // Logical operators - &&, ||, !
+    //logical AND operator - when both the conditions are true 
+    // logical OR operator - when one of the condition is true
+    // logical NOT - it returns the oposite boolean value
+
+    let x = 4;
+    let a = false;
+    let b = true;
+    // if((x%2==0) && (x>5)){
+    //     console.log('Even number and greater than 5');
+    // }
+    // else {
+    //     console.log('else block')
+    // }
+
+    if (a || b || false) {
+        console.log('If block');
+    }
+    else {
+        console.log('else block');
+    }
+
+    console.log(!b);
+
+    let age = 19;
+    let hasLicence = false;
+    //false, 0 , 
+    if (age >= 18 && hasLicence) {
+        console.log('You can ride the bike');
+    }
+    else {
+        if (age < 18)
+            console.log("You are under age");
+        else
+            console.log("You doesn't have a licence");
+    }
+
+    let graduation = true;
+    let postGraduation = false;
+
+    if (graduation || postGraduation) {
+        console.log('He can do job')
+    }
+    else {
+        console.log('He can not do job');
+    }
+
+    console.log(true && console.log('Second condition'));
+    console.log(true || console.log('second condition'));
+
+    // if(x!=10)
+
+
+</script>
