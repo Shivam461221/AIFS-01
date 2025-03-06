@@ -1,0 +1,33 @@
+<script>
+    // do while loop
+    // it executes at least one time even when condition is not true
+
+    let x = 1;
+
+    // do{
+    //     console.log(x);
+    //     x++;
+    // } while(false)
+
+    // let a = 10;
+
+    // do{
+    //     console.log(a*x);
+    //     x++;
+    // } while(x<=10)
+
+    let balance = 5000;    //4000
+    let withdrawlAmount;
+
+    do{
+        withdrawlAmount = 1*prompt('Enter amount to withrawal');
+        if(withdrawlAmount>balance){
+            console.log("Insufficient balance");
+        }
+        else{
+            balance = balance - withdrawlAmount;   //balance -= withdrawalAmount
+            console.log('Transaction completed and remaining balance is '+ balance);
+        }
+    } while(withdrawlAmount>balance)
+
+</script>
