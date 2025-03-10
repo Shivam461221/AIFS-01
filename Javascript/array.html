@@ -1,0 +1,79 @@
+<script>
+    // non - primitive (refrence type )
+    // Object 
+    
+    // Array - It is a collection 
+    let fruits = ['Apple', 'Grapes', 'mango', 'Watermelon'];
+    console.log(typeof fruits);
+
+    console.log(fruits[0]);
+
+    let evenNumbers = [2,4,6,8,10];
+
+    console.log(evenNumbers);
+
+    for(let i = 0; i<fruits.length ; i++){
+        console.log(fruits[i]);
+    }
+
+    // for of, forEach
+    
+    for(let element of fruits){  //for of loop return element of an array
+        console.log(element);
+    }
+
+    evenNumbers.forEach(value=>{  //for each loop  
+        console.log(value);
+    });
+
+    const animals = ['Cat', 'Dog', 'Mouse'];
+
+    console.log(animals);
+    // How to add elements in Array
+    animals.push('Parrot');  // push method add value to the end of an array
+    console.log(animals);  
+
+    //animals[0]='snake'; //it will update the value at 0 index
+
+    animals.unshift('snake'); //unshift method will add value at starting of an array
+    console.log(animals);
+
+    animals.splice(2, 0, 'Tortoise');   //(index, delete, element which we have to add);
+    console.log(animals);
+
+    //How to delete elements in array
+    animals.pop();   //pop method will remove element from end
+    console.log(animals);  
+
+    animals.shift();
+    console.log(animals);  //shift method will remove element from starting
+
+    animals.splice(2, 2);  //(index, number of elements which we have to remove)
+    console.log(animals);
+
+    animals.splice(1,1,'fish','rabbit');  //it will remove index 1 value and add fish and rabbit
+    console.log(animals);
+
+
+    const arr1 = [1,2,3,4,5,6,7,8,9,10];
+    //find method - it will return the element if it exist, it will return undefined if the value not exist
+
+    //let x = prompt('Enter a fruit name');
+       
+    //let value = fruits.find(fruit=>fruit===x);
+
+    //console.log(fruits.find(fruit=>fruit===x));
+
+    //indexOf method - it will return index , it will return -1 if the value not exist
+
+    console.log(fruits.indexOf('A'));
+
+    //includes method - It will return true or false
+    console.log(fruits.includes('mango'));
+
+
+    let arr2 = [1, 2, 'mango', false, null];
+
+    console.log(arr2);
+
+</script>

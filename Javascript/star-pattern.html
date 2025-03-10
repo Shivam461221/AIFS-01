@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>  
+</body>
+<script>
+    //Star patterns
+
+    document.write('<h1>HEllO JavaScript</h1>');
+
+    let n = 5;
+    // *
+    // * *
+    // * * *
+    // * * * *
+    // * * * * *
+    //right angle traingle star pattern
+    for(let i = 1; i<=n ;i++ ){
+        let row = '';
+        for(let j=1;j<=i;j++){
+            row += '* ';
+        }
+        console.log(row);
+    }
+
+    // * * * * *
+    // * * * *
+    // * * *
+    // * *
+    // * 
+    // reverse right angle traingle star pattern
+    for(let i = 1;i<=n;i++){
+        let row = '';
+        for(let j = n; j>=i;j--){    //j = 5, j>=1
+            row += '* ';
+        }
+        console.log(row);
+    }
+
+    for(let i = 1;i<=n;i++){
+        let row = '';
+        for(let j=1;j<=n;j++){
+           row += '* '
+        }
+        //console.log(row);
+        document.write(row + '<br>');
+    }
+
+    for(let i = 1; i<=n ;i++ ){
+        let row = '';
+        for(let k = n;k>=i;k--){
+            row+=' ';
+        }
+        for(let j=1;j<=i;j++){
+            row += '* ';
+        }
+        console.log(row);
+    }
+
+</script>
+</html>
