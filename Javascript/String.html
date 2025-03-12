@@ -1,0 +1,70 @@
+<script>
+    // string - it is a sequence of characters, symbols, numbers, alpha-numeric values
+    // String is immutable (It cannot be change after creation)
+
+    let x = 10;
+
+    x=20;
+
+    let name = 'Shivam';
+
+    name = 'Lowanshi';
+
+    console.log(name);
+
+    for(let i = 0; i<name.length; i++){
+        console.log(name[i]);
+    }
+
+    for(let element of name){
+        console.log(element);
+    }
+
+    // name.forEach(element => {
+    //     console.log(element);
+    // });
+
+    console.log(name.charAt(1));
+
+    //substring - A part of string 
+
+    console.log(name.substring(0,4));   //(starting index, index-1(3));
+    console.log(name.substring(3));   //(starting index)
+    console.log(name.substring(2,5));  //(start with index 2, end with index 4)
+
+    //let subString = name.substring(2,5);
+
+    //split - it will split the string according to a seperator and convert it into array
+    let str = 'apple-banana-mango';
+    console.log(str.split('a'));    //split(seperator)   , seperator :- ',' '-' 'any alphabet' 'space' 
+    console.log(str.split('',5));   //split(separator, number of elements)
+
+    //join - It will join the elements 
+
+    let arr = ['a','p','p','l','e'];
+
+    console.log(arr.join());     //join(separator); default separator - comma(,)
+
+    let str2 = arr.join();
+
+    console.log(typeof str2);
+
+    console.log(arr.join(''));
+
+    console.log(arr.join('-'));
+
+    console.log(arr.join('*'));
+
+
+    let arr2 = [1,2,3,4,5,6,6];
+
+    console.log(arr2.join(''));
+
+
+    // convert a string into array without using any built in method
+    // print a string into reverse order
+    // replace a character in a string
+
+
+
+</script>
