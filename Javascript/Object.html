@@ -1,0 +1,65 @@
+<script>
+    //Object - A real world entity it has attributes and behavior
+    // for example - Bottle[Attributes (Company- Milton, price - 300, Metal - Steel), Behaviour (It stores water or any liquid)
+    // In JS object is collections of key-value pairs
+    
+    let arr = [1,2,3,4,45,];
+
+    //let arr2 = [11,112,...arr];
+
+    //let arr2 = arr;
+
+    //console.log(arr2);
+
+    let person = {name:"Shivam", age:25, isMarried:false };
+
+    console.log(person.isMarried);
+
+    let laptop = new Object();  //second way to create an object
+
+    laptop.brand = 'HP';
+    laptop.price = 150000;
+
+    console.log(laptop);
+
+    console.log(Object.keys(person));    // it will return an array of keys in a particular object
+    console.log(Object.values(person)); // it will retyur an array of values in a particular object
+    console.log(Object.entries(person));    //it will return seperate arrays of key-value pairs
+
+    for(let key in person){       //for in loop
+        //console.log(key);     //it will return keys of person object
+       // console.log(person[key]); //it will return values of person object
+       console.log(`${key} : ${person[key]}`);
+    }
+
+    let person2 = person;    //copy a object-if we will change anything in copied object then it will also reflect in original
+    person2.name = 'Sanket';
+
+    console.log(person.name);
+
+    let personClone = {...person};   //clone a object    ...spread operator   it will not affect the original object
+
+    personClone.age = 28;
+
+    console.log(person.age);
+
+    //destructuring - extracts elements from an array or objects
+
+    let mobile = {brand : 'samsung', price : 15000, model : 'GalaxyS25'};
+
+    // let brand = mobile.brand;
+    // let price = mobile.price;
+    // let model = mobile.model;
+
+    const {brand,model} = mobile;
+
+    console.log(brand);
+
+    console.log(model);
+
+    let arr3 = [10,20,30];
+
+    let [x, ,y] = arr3;
+
+    console.log(x+" "+y);
+</script>
