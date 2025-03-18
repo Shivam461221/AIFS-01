@@ -1,0 +1,40 @@
+<script>
+    // functions - A block of reusable code that build to perform a specific task, write once and use many time
+
+
+    //function definition
+    function printMessage(){    
+        console.log('This is a function');
+    }  
+    
+    printMessage(); //function calling
+
+    //parameterize funtions
+    function sum(a,b){      //parameter - variables that needs when function perform tasks
+        console.log(a+b);
+    }
+
+    sum(10, 20);   //argument passing - actual values passes when function called
+
+    sum(15, 30);
+
+    //return type
+    function multiply(a, b){
+        return a*b;
+    }
+
+    let result = multiply(10,20);
+
+    console.log(result);
+
+    //we can assign a function in a variable
+    let substraction = function(a, b){
+        console.log(a-b);
+    }
+
+    substraction(20,10);
+
+
+  
+
+</script>

@@ -1,0 +1,47 @@
+<script>
+    // global - it created when JS file runs
+    // functional - it creates when function called 
+
+
+let x = 10;  // global declare 
+
+function printName(){
+    //let name = prompt('Enter your name');     // block level variable
+    //console.log(name);
+    //console.log(x);
+}
+
+printName();
+
+
+function sum(a,b,c){
+    return a+b+c;
+}
+
+// const add = sum(2,3,4);
+
+console.log(typeof add);
+console.log(add);
+
+function printTable(x){
+    for(let i=1;i<=10;i++){
+        console.log(x*i);
+    }
+}
+
+printTable(17);
+
+printTable(23);
+
+function printSurname(){
+    return 'Sharmaji';           // return type 
+}
+
+let name = printSurname();
+
+console.log(name);
+console.log(typeof name);
+
+
+
+</script>
