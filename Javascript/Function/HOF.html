@@ -1,0 +1,15 @@
+<script>
+    //Higher Order Function
+
+    function Operate(a,b, operation){
+        return operation(a,b);
+    }
+
+    const add = (x,y)=>x+y;
+    const multiply =(x,y) =>x*y;
+
+    console.log(Operate(2,5,add));
+    console.log(Operate(10,20,multiply));
+
+    //map, reduce, filter
+</script>

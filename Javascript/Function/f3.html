@@ -1,0 +1,28 @@
+<script>
+
+
+    function checkNumber(x){
+        if(x>0){
+            return 'Positive Number';
+        }
+
+        else if(x<0){
+            return 'Negative number';
+        }
+
+        return 'Zero';
+    }
+
+    function print(){
+        console.log('Before return statement');
+
+        return 0;
+
+        console.log('After return ');
+    }
+
+    const num = checkNumber(0);
+    console.log(num);
+
+    print();
+</script>

@@ -1,0 +1,30 @@
+<script>
+    //callback function - asynchronous task perform
+
+    function greet(name, callback){
+        console.log('Hello '+name);
+        callback();
+    }
+
+    function sayGoodBye(){
+        console.log('Goodbye!');
+    }
+
+    greet('Shubham', sayGoodBye);
+
+    function operation(a,b, func1, func2){
+        console.log('sum is '+(a+b));
+        func1(a,b);
+        func2(a,b);
+    }
+
+    function multiply(a, b){
+        console.log('The product is '+(a*b));
+    }
+
+    function substraction(a,b){
+        console.log('Subtraction is '+(b-a));
+    }
+
+    operation(10,20, multiply,substraction);
+</script>
