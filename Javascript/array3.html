@@ -1,0 +1,44 @@
+<script>
+    let arr = [1,2,3,4,54];
+    console.log(arr[3]);
+    let arr2 = new Array(5);
+
+    //multidimentional array - A multidimentional array is an array contaaining other array as element
+    //
+
+    let matrix = [
+        [1,2,3],
+        [4,5,6]
+    ];
+
+    console.log(matrix[0][1]);
+
+    for(let i = 0;i<matrix.length;i++){
+        for(let j=0;j<matrix[i].length;j++){
+            console.log(matrix[i][j]);
+        }
+    }
+
+    const threeDArray = [
+        [
+            [1,2],
+            [3,4]
+        ],
+        [
+            [5,6],
+            [7,8]
+        ]
+    ];
+
+    for(let i=0;i<threeDArray.length;i++){
+        for(let j = 0;j<threeDArray[i].length;j++){
+            for(let k=0;k<threeDArray[i][j].length;k++){
+                console.log(threeDArray[i][j][k]);
+            }
+        }
+    }
+
+
+
+
+</script>

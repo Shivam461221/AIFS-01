@@ -1,0 +1,33 @@
+<script>
+    let name = 'Sanket';
+
+    const person = {
+        name : 'Shivam',
+        age : 25,
+        isMarried : false,
+        greet : function(){
+            return `Hello my name is ${this.name}`;
+        }
+    }
+
+    console.log(person.greet());
+
+
+    const cloudblitz = {
+        name : 'Cloudblitz Technologies',
+        address : 'Nagpur',
+        work : function(){
+            console.log(this.name+' gives training to students');
+        }
+    }
+
+    cloudblitz.work();
+
+    console.log(Object.keys(person)); // return a array of keys
+
+    console.log(Object.values(cloudblitz)); // return array of values
+
+    console.log(Object.entries(person)); //return key values a separate array
+    
+
+</script>
