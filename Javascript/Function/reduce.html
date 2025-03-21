@@ -1,0 +1,23 @@
+<script>
+    //reduce - it returns accumalator
+
+    const arr = [1,2,3,4,5,6,7,8,9,10];
+
+    console.log(arr);
+
+    const sum = arr.reduce((acc, num)=>acc+num,0);
+
+    console.log(sum);
+
+    const product = arr.reduce((acc, num)=>acc*num,1);  //
+
+    console.log(product);
+
+    const numbers = [10,20,500,40,90];
+
+    const max = numbers.reduce((acc,num)=>(num>acc ? num : acc),numbers[0])
+
+    console.log(max);
+
+
+</script>

@@ -1,0 +1,27 @@
+<script>
+    //map(), reduce(), filter() - Inbuild higher order function , 
+    // These functions does not change original array
+
+    //map() - transforms each element of an array and return a new array
+    
+    const numbers = [1,2,3,4,5,6,7,8,9,10];
+    console.log(numbers);
+
+    const newNumbers = numbers.map(num=>num*num*num);  //array.map(callback(currentValue, index, array))
+ 
+    console.log(newNumbers);
+
+    //filter - filter elements of an array based on a condition and return a new array
+
+    const evenNumbers = numbers.filter(currentElement=>currentElement%2===0);
+
+    console.log(evenNumbers);
+
+    //console.log(numbers);
+
+    //reduce - it executes a reducer function on each element of the array, and returns a single output
+
+    const sum = numbers.reduce((acc, num)=>acc*num, 1);
+
+    console.log(sum);
+</script>
