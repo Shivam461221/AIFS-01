@@ -1,0 +1,60 @@
+<script>
+    // 
+    let arr = [1, 2, 3, 4, 5, 6, 7];
+
+    console.log(arr.reverse()); //reverse function - array
+
+    let name = 'Shivam';
+
+    //console.log(name.toLowerCase());
+
+    //program to reverse a string 
+    function reverseString(str){
+        return str.split('').reverse().join('');
+    }
+
+    //name = shivam
+    //name.split('') - ['s', 'h', 'i', 'v','a','m']
+    //name .reverse() - ['m','a','v', 'i','h','s']
+    //name.join('') - mavihs
+    let reverseName = reverseString(name);
+    console.log(reverseName);
+
+    //check if a string is palindrome   ex - 121, nan
+    function isPalindrome(str){
+        let reverse = str.split('').reverse().join('');
+        return str === reverse;
+    }
+
+    console.log(isPalindrome('madam'));
+    console.log(isPalindrome('12321'));
+
+
+    //convert small letters to capitaal letters in an array
+    const fruits = ['banana', 'apple', 'mango', 'watermelon'];
+    console.log(fruits);
+    const upperWords = fruits.map(fruit=>fruit.toUpperCase());
+
+    console.log(upperWords);
+
+    //filter a array whole element's length is greater than 5
+
+    const filterArray = fruits.filter(fruit=>fruit.length>5);
+    console.log(filterArray);
+
+    //remove falsy values from an array
+
+    const mixedArray = [0, 'hello', undefined, false, 'world',true,  null, 42] ;
+    console.log(mixedArray)
+    const truthyValues = mixedArray.filter(Boolean);
+    console.log(truthyValues);
+
+    //factorial of a number - 5
+    function getFactorial(num){
+        return num===0 ? 1 : num*getFactorial(num-1);      // recursion - caling a function inside itself
+    }
+    console.log(getFactorial(3));
+
+
+      //DOM - Document Object Model
+</script>
