@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #h1{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="h1">This is a heading</h1>
+    <div class="parent">
+    </div>
+</body>
+<script>
+    let heading = document.getElementById('h1');
+    heading.textContent = 'Heading 1 1';
+
+    let paragraph = document.createElement('p');
+    paragraph.textContent = 'This is paragraph';
+
+    //document.body.appendChild(paragraph);
+    let parent = document.getElementsByClassName('parent')[0];
+    parent.appendChild(paragraph);
+
+    //DOM - Document Object Model
+    // HTML Document tree like structure 
+        //                 DOM
+        //                 |
+        //                 HTML
+        //  _______________|_____________
+        // HEAD                        BODY
+        // |                             |
+        // TTILE                       Div     P 
+</script>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="p1">This is paragraph 1</p>
+    <p id="p2">This is paragraph 2</p>
+    <p class="p1">This is paragraph 3</p>
+    <p class="p1">This is paragraph 4</p>
+
+    <h3>Heading</h3>
+
+    <div id="parent">
+        1
+        <h1 >Div1</h1>
+    </div>
+    <div>2</div>
+    <div>3</div>
+    <script>
+        let paragraph = document.getElementById('p2');
+        paragraph.style.backgroundColor = 'red';
+       paragraph.remove();
+
+       let child = document.getElementById('parent').children;
+       console.log(child[0]);
+       child[0].remove();
+
+        let p = document.getElementsByClassName('p1')[1];
+        p.style.backgroundColor = 'yellow'
+
+        let h3 = document.getElementsByTagName('h3')[0];
+        h3.style.backgroundColor = 'purple';
+
+        let div = document.querySelectorAll('div')[2];
+        console.log(div);
+        div.style.backgroundColor='blue';
+       div.style.padding='20px'
+        
+    </script>
+</body>
+
+</html>
