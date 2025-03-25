@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #parent{
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid black;
+        }
+
+        #KeyPressed{
+            min-width: 50px;
+            height: 50px;
+            background-color: green;
+            color: white;
+            font-size: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Keyboard Events</h1>
+    <h3>Press Any Key</h3>
+    <div id="parent">
+        <div id="KeyPressed"></div>
+    </div>
+    <script>
+        // keyup, keydown
+        let keyPressed = document.getElementById('KeyPressed');
+        
+        document.addEventListener('keydown', function(event){
+            keyPressed.innerText = event.key;
+        });
+
+        document.addEventListener('keyup', function(event){
+            keyPressed.innerText = '';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 200px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <script>
+        let div = document.querySelectorAll('div');
+        console.log(div);
+
+        // div.onclick = function(){     
+        // }
+
+        div[1].addEventListener('mouseover', function(){
+            div[1].style.backgroundColor = 'purple';
+            //console.log(event.target.id);
+        });
+
+        div[1].addEventListener('mouseout', function(){
+            div[1].style.backgroundColor = 'white';
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1">This is a heading</h1>
+    <button>Red</button>
+    <button onclick="changeBackgroundBlue()" >Blue</button>
+    <script>
+        let heading = document.getElementById('h1');
+        let button = document.querySelector('button');
+
+        function changeBackgroundRed(){
+            heading.style.backgroundColor = 'red';
+        }
+        button.addEventListener('click', changeBackgroundRed);
+
+        function changeBackgroundBlue(){
+            heading.style.backgroundColor = 'blue'
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div-1{
+            border: 5px solid red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <p>This is a paragraph</p>
+    <script>
+        let div = document.createElement('div');
+        div.style.height = '200px'
+        div.style.backgroundColor='purple'
+        div.setAttribute('class','div-1');
+        //div.textContent = 'This is a div';
+
+        let button = document.createElement('button');
+        button.innerHTML = 'Okay';
+
+
+        button.addEventListener('click', function(){
+            let p = document.querySelector('p');
+            p.remove();
+        })
+
+        div.appendChild(button);
+
+        document.body.appendChild(div);
+
+        
+    </script>
+</body>
+</html>
