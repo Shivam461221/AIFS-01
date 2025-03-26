@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container p-5">
+        <form >
+            <div class="form-group">
+                <label>Username</label>
+                <input id="username" onblur="validateUsername()" type="text" placeholder="Enter your Username"
+                    class="form-control">
+                <small id="usernameError"></small>
+            </div>
+            <div class="form-group mt-3">
+                <label>Email</label>
+                <input id="email" onblur="validateEmail()" type="text" placeholder="Enter your email"
+                    class="form-control">
+                <small id="emailError"></small>
+            </div>
+            <div class="form-group mt-3">
+                <label>Phone number</label>
+                <input id="phone" onblur="validatePhone()" type="text" placeholder="Enter your phone"
+                    class="form-control">
+                <small id="phoneError"></small>
+            </div>
+            <button type="submit" onclick="return validateForm()" class="btn btn-primary mt-3">Submit</button>
+        </form>
+    </div>
+
+    <div class="row p-5">
+        <div class="col-md-6" id="forUsername"></div>
+        <div class="col-md-6" id="forEmail"></div>
+    </div>
+    <script>
+
+        // function defaultName(e) {
+        //     e.preventDefault();
+        //     let username = document.getElementById('username').value;
+        //     let email = document.getElementById('email').value;
+
+        //     let userCol = document.getElementById('forUsername');
+        //     let emailCol = document.getElementById('forEmail');
+        //     userCol.innerText = username;
+        //     emailCol.innerText=email;
+        // };
+
+        // function blured(){
+        //     alert('Input element focused');
+        // }
+        function validatePhone(){
+            let status = true;
+            let phone = document.getElementById('phone').value;
+            let error = document.getElementById('phoneError');
+
+            if (phone == '') {
+                error.innerText = 'Please enter your Phone number';
+                error.style.color = 'red'
+                status = false;
+            } else if(isNaN(phone)){
+                error.innerText = 'Only digits allowed';
+                error.style.color = 'red'
+                status = false;
+            }  
+            else if(phone.length!=10){
+                error.innerText = 'Phone number should be of 10 Digit';
+                error.style.color = 'red'
+                status = false;
+            }
+            else {
+                error.innerText = '';
+            }
+            return status;
+        }
+
+        function validateUsername() {
+            let status = true;
+            let username = document.getElementById('username').value;
+            let error = document.getElementById('usernameError');
+
+            if (username == '') {
+                error.innerText = 'Please enter your name';
+                error.style.color = 'red'
+                status = false;
+            }
+            else {
+                error.innerText = '';
+            }
+            return status;
+        }
+
+        function validateEmail() {
+            let status = true;
+            let email = document.getElementById('email').value;
+            let error = document.getElementById('emailError');
+
+            if (email == '') {
+                error.innerText = 'Please enter your email';
+                error.style.color = 'red'
+                status = false;
+            }
+            else {
+                error.innerText = '';
+            }
+            return status;
+        }
+
+        function validateForm() {
+            let username = validateUsername();
+            let email = validateEmail();
+            let phone = validatePhone()
+
+            if(username && email && phone){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>
