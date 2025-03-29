@@ -1,0 +1,12 @@
+<script>
+    localStorage.setItem('user', 'shivam');
+    localStorage.setItem('age', 25);
+
+    let user = localStorage.getItem('age');
+    console.log(user);
+
+    localStorage.removeItem('user');  //delete with specific key
+    localStorage.clear() ;   //delete all 
+
+    sessionStorage.setItem('temp', 'loggedin');
+</script>

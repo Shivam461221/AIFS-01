@@ -1,0 +1,18 @@
+<script>
+    //JSON - javascript object notation
+    // {
+    //     "name":"shivam",
+    //     "age":25,
+    //     "isMarried" : false;
+    // }
+
+    let jsonstring = '{"name":"shivam","age":25,"isMarried":false,"skills":["Java","javascript","sql"]}';
+
+    console.log(typeof jsonstring);
+
+    let person = JSON.stringify(jsonstring);
+
+    console.log(typeof person);
+
+    console.log(JSON.parse(jsonstring));
+</script>
