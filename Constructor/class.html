@@ -1,0 +1,16 @@
+<script>
+    class Animal{
+
+        constructor(name, species){
+            this.name = name;
+            this.species = species;
+        }
+
+        getDescription(){
+            return `${this.name} ${this.species}`
+        }
+    }
+
+    let dog = new Animal('Dog', 'Wild');
+    console.log(dog.name);
+</script>

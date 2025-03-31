@@ -1,0 +1,23 @@
+<script>
+
+        function Car(brand, model, year){
+            this.brand = brand;
+            this.model = model;
+            this.year = year;
+        }
+
+        Car.prototype.getDetails = function(){
+            return `${this.brand} ${this.model} ${this.year}`;
+        }
+
+        Car.prototype.price = 1200000;
+
+        Car.prototype.price = 1500000;
+
+        let car1 = new Car('Honda', 'Civic', 2021);
+
+        console.log(car1.brand);
+        console.log(car1.getDetails());
+        console.log(car1.price);
+
+</script>
