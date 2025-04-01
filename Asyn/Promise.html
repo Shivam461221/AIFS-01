@@ -1,0 +1,19 @@
+<script>
+    //Promise - Promise is for eventual completion of task. It is an object in JS
+    //It is a sollution to callback hell
+    //Pending, Fulfill, Reject
+
+    let myPromise = new Promise((resolve, reject)=>{
+       let condition = confirm('Yes or no');
+        if(condition){
+            resolve('Promise is fullfiled')
+        }
+        else{
+            reject('Promise is rejected')
+        }
+    });
+
+    myPromise
+    .then(result=>console.log(result))
+    .catch(error=>console.log(error));
+</script>
