@@ -1,0 +1,33 @@
+<script>
+
+    // closure - A closure is a function that remembers the variable from its outer scopre even after 
+    // outer function has finished execution
+
+    let x = 10;
+
+
+
+
+    function counter(){
+        let count = 0; //exist 
+
+        return function(){
+            count++;
+            console.log(count);
+            console.log('x' + x)
+        } 
+    }
+
+    function show(){
+        console.log('X '+x);
+    }
+
+    const increment =  counter();
+
+    increment();
+    increment();
+    show();
+
+// 
+
+</script>
