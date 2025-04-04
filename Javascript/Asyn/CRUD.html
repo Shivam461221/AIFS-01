@@ -1,0 +1,86 @@
+<script>
+    //CRUD - Create, Read, Update, Delete
+    //Requests - 
+    // Get - Read 
+    // Post - Create
+    // Put - Update
+    // Delete-delete
+
+    // 
+
+    const API_URL = 'https://dummyjson.com/products';
+
+    //get all post
+    async function getProduct() {
+        try {
+            const response = await fetch(API_URL);
+            const data = await response.json();
+            console.log("Post ", data);
+        }
+        catch (error) {
+            console.error(error);
+        }
+
+    }
+
+    getProduct();
+
+    async function createproduct(productData) {
+        try {
+            const response = await fetch('https://dummyjson.com/products/add', {
+                method: "POST",
+                headers: {
+                    "Content-type": "application/json"
+                },
+                body: JSON.stringify(productData)
+            });
+
+            const data = await response.json();
+            console.log('POST Created', data);
+        }
+        catch (error) {
+            console.error(error);
+        }
+    }
+
+    createproduct({ "id": 1, "title": "Mobile", "price": 10000 });
+
+    async function deleteProduct(productId){
+        try{
+            const response = await fetch(`https://dummyjson.com/products/${productId}`,{
+                method:'DELETE'
+            });
+
+            if (response.ok){
+                console.log("Product "+productId +" Deleted successfully")
+            }else{
+                console.log(response.status);
+            }
+        }
+        catch(error){   
+            console.error(error);
+        }
+    }
+
+deleteProduct(5);
+
+async function updateProduct(productId, updatedData) {
+    try{
+        const response = await await fetch(`https://dummyjson.com/products/${productId}`,{
+            method:"PUT",
+            headers:{
+                "Content-type":"application/json"
+            },
+            body:JSON.stringify(updateProduct)
+        });
+        const data = await response.json();
+        console.log("Data updated ",data)
+    }
+    catch(error){
+        console.log(error);
+    }
+}
+
+updateProduct(2, {"title":"smartphone", "price":12000});
+
+</script>
