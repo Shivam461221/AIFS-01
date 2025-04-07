@@ -1,0 +1,31 @@
+<Script>
+    //map - it is a collection of key-value pairs 
+
+    const myMap = new Map();
+
+    myMap.set('name', "Shivam");
+    myMap.set('age', 25);
+    myMap.set(1, 'One');
+    myMap.set(true, "yes")
+
+    console.log(myMap);
+
+    console.log(myMap.get(1));
+
+    console.log(myMap.has('name'));
+
+    myMap.delete(true);
+
+    console.log(myMap);
+
+    //myMap.clear();
+
+    console.log(myMap);
+
+    for(let [key, value] of myMap){
+        console.log(key, " : ", value);
+    }
+
+    //size, keys(), values(), enteries()
+
+</Script>

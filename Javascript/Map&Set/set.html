@@ -1,0 +1,29 @@
+<script>
+    //set - It is a collection og unique values
+
+    const mySet = new Set();
+
+    mySet.add('apple');
+    mySet.add('grapes');
+    mySet.add('pineapple');
+    mySet.add('apple');
+
+    console.log(mySet);
+
+    console.log(mySet.has('apple'));
+
+    mySet.delete('pineapple');
+
+    console.log(mySet);
+
+    console.log(mySet.size);
+
+    for(let element of mySet){
+        console.log(element);
+    }
+
+    //clear(), values()
+
+
+    
+</script>
