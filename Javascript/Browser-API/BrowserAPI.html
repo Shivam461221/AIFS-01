@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="getLocation()" >Get Location</button>
+    <p id="para"></p>
+    <script>
+        //Web API - It is a interface thaat allows communication between a client(Web app) and a server over
+        //the internet using protocols like HTTP
+        //example - fetch(), axios()
+
+        //Browser API - It is built into the browser and allows JS to interact with browser and user's device
+        //document(DOM), console, localStorage, sessionStorage, alert/prompt/confirm, setTimeout, setInterval
+
+        function getLocation(){            //to get location
+            let para = document.getElementById('para');
+            let latitude='';
+            let longitude='';
+            navigator.geolocation.getCurrentPosition(position=>{
+                latitude = position.coords.latitude;
+                longitude = position.coords.longitude;
+                para.textContent = `Latitude ${latitude} and Longitude ${longitude}`;
+            })  
+        }
+
+        setTimeout(()=>{
+            console.log('Location');
+        }, 2000);                  //2000 miliseconds = 2seconds
+
+        let count = 0; 
+
+        // setInterval(()=>{
+        //     ++count;
+        //     console.log(count);
+        // }, 2000);
+
+        
+    </script>
+</body>
+</html>
