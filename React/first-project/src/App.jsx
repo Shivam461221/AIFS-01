@@ -5,10 +5,12 @@ import './App.css'
 import Counter from './components/Counter'
 
 function App() {
-  const [count, setCount] = useState(0)
+  //const [count, setCount] = useState(0)
 // JSX - Javascript XML (syntax extention)
+//<> </>  React fragement 
+// fragement or div tag 
   return (
-    <>
+    <>       
       <Counter/>
     </>
   )
