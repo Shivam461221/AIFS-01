@@ -1,0 +1,32 @@
+export default [
+    {
+        "id":100,
+        "name":"Sanket",
+        "branch":"CS",
+        "mobile":9977884455
+    },
+    {
+        "id":101,
+        "name":"Shivam",
+        "branch":"IT",
+        "mobile":9977884466
+    },
+    {
+        "id":102,
+        "name":"Shubham",
+        "branch":"CS",
+        "mobile":9977884488
+    },
+    {
+        "id":103,
+        "name":"Prajakta",
+        "branch":"Mechanical",
+        "mobile":9977884499
+    },
+    {
+        "id":104,
+        "name":"Sourabh",
+        "branch":"EC",
+        "mobile":9977884433
+    }
+]
