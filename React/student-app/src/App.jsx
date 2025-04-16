@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import studentData from './StudentData.js'
+import StudentList from './components/StudentList.jsx'
 
 function App() {
   const [studentList, setStudentList] = useState(studentData);
@@ -32,7 +33,14 @@ function App() {
   // }
 
   const addStudent=()=>{
-    alert(idRef.current.value);
+    let id = idRef.current.value;
+    let name = nameRef.current.value;
+    let branch= branchRef.current.value;
+    let mobile = mobileRef.current.value;
+    
+    let newStudent = {id, name, branch, mobile};
+    setStudentList([...studentList, newStudent]);
+
   }
 
   return (
@@ -51,7 +59,7 @@ function App() {
           <div className="col-md-6">
           <div className="form-group">
               <label htmlFor="">Student Name</label>
-              <input id='studentName' type="text" className="form-control" />
+              <input ref={nameRef} id='studentName' type="text" className="form-control" />
             </div>
           </div>
         </div>
@@ -59,7 +67,7 @@ function App() {
           <div className="col-md-6">
             <div className="form-group">
               <label htmlFor="">Student Branch</label>
-              <select id='studentBranch' className='form-control'>
+              <select ref={branchRef} id='studentBranch' className='form-control'>
                 <option value="">Select</option>
                 {branch.map((branch, index)=><option key={index} >
                   {branch}
@@ -70,7 +78,7 @@ function App() {
           <div className="col-md-6">
           <div className="form-group">
               <label htmlFor="">Student Mobile</label>
-              <input id='studentMobile' type="text" className="form-control" />
+              <input ref={mobileRef} id='studentMobile' type="text" className="form-control" />
             </div>
           </div>
         </div>
@@ -81,28 +89,7 @@ function App() {
         </div>
       </div>
 
-      <table className='table table-striped' >
-        <thead>
-          <tr>
-              <th>Id</th>
-              <th>Name</th>
-              <th>Brnach</th>
-              <th>Mobile</th>
-              <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          {
-            studentList.map((student, index)=> <tr key={student.id} >
-              <td>{student.id}</td>
-              <td>{student.name}</td>
-              <td>{student.branch}</td>
-              <td>{student.mobile}</td>
-              <td><button onClick={()=>removeStudent(student.id)} className='btn btn-danger'>Remove</button></td>
-            </tr> )
-          }
-        </tbody>
-      </table>
+      <StudentList studentList={studentList} removeStudent={removeStudent} />
 
     </>
   )
