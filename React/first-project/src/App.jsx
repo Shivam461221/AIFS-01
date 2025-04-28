@@ -7,6 +7,8 @@ import CounterWithProgress from './components/CounterVisual'
 import ShowHide from './components/ShowHide'
 import SearchUser from './components/SearchUser'
 import Student from './components/Student'
+import Reducer from './components/Reducer'
+import TodoApp from './components/TodoApp'
 
 function App() {
   //const [count, setCount] = useState(0)
@@ -19,7 +21,9 @@ function App() {
       {/* <CounterWithProgress/> */}
       {/* <ShowHide/> */}
       {/* <SearchUser/> */}
-      <Student/>
+      {/* <Student/> */}
+      {/* <Reducer/> */}
+      <TodoApp/>
     </>
   )
 }

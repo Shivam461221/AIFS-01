@@ -3,7 +3,6 @@ import './Home.css';
 
 export default function Home(){
     const navigate = useNavigate();
-
     const navigateToAbout=()=>{
         navigate('/about')
     }
