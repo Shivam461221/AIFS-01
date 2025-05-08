@@ -11,7 +11,8 @@ export default function Login() {
         e.preventDefault();
         try {
             let response = await axios.post('http://localhost:8000/api/auth/login', { email, password });
-            if (response) {
+            if (response && response.data.token) {
+                localStorage.setItem('token', response.data.token);
                 navigate('/dashboard');
                 console.log(response.data);
             }
@@ -23,8 +24,6 @@ export default function Login() {
             console.log(error);
         }
     }
-
-    console.log(email);
     return (
         <>
             <section className="book_section layout_padding">

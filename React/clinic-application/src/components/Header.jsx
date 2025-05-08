@@ -1,7 +1,13 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Header(){
+    const navigate = useNavigate();
+    const token = localStorage.getItem('token');
 
+    const logout =()=>{
+        localStorage.removeItem('token')
+        navigate('/');
+    }
     return(
         <>
             <header className="header_section">
@@ -64,10 +70,16 @@ export default function Header(){
                                                 {/* <a className="nav-link" href="testimonial.html">Testimonial</a> */}
                                                 <Link to={'/testimonial'} className="nav-link" >Testimonial</Link>
                                             </li>
-                                            <li className="nav-item">
-                                                {/* <a className="nav-link" href="contact.html">Contact Us</a> */}
+                                           
+                                                <li className="nav-item">
+                                            
                                                 <Link to={'/contact'} className="nav-link" >Contact</Link>
+                                                   
                                             </li>
+                                            <li className="nav-item">
+                                                <Link to={'/doctorsList'} className="nav-link" >Doctors</Link>
+                                            </li>
+                                            
                                         </ul>
                                     </div>
                                     <div className="quote_btn-container">
@@ -77,18 +89,19 @@ export default function Header(){
                                                 Login
                                             </span>
                                         </a> */}
-                                        <Link to={'/login'} >
+                                        
                                         <i className="fa fa-user" aria-hidden="true"></i>
-                                            <span>
-                                                Login
-                                            </span>
-                                            </Link>
-                                        <a href="">
+                                            {
+                                                (token) ? <span> <button onClick={()=>logout()} className="btn btn-danger">Logout</button></span>: <span><Link to={'/login'} >Login</Link></span>
+
+                                            }
+                                            
+                                        {/* <a href="">
                                             <i className="fa fa-user" aria-hidden="true"></i>
                                             <span>
                                                 Sign Up
                                             </span>
-                                        </a>
+                                        </a> */}
                                         <form className="form-inline">
                                             <button className="btn  my-2 my-sm-0 nav_search-btn" type="submit">
                                                 <i className="fa fa-search" aria-hidden="true"></i>
