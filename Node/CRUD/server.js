@@ -14,7 +14,7 @@ const studentsSchema = new mongoose.Schema({
     timestamps:true
 });
 
-const Students = mongoose.model('stduents', studentsSchema);
+const Students = mongoose.model('students', studentsSchema);
 
 const student = new Students({name:'Shivam',course:'MCA',email:'shivam@123'});
 
