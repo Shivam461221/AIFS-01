@@ -5,7 +5,7 @@ const PORT = 3000;
 
 const uri = "mongodb://127.0.0.1:27017/crud";
 
-app.use(express.json()); //middleware function
+app.use(express.json()); //middleware function  
 
 mongoose.connect(uri)
 .then(()=>console.log('Database connected'))
