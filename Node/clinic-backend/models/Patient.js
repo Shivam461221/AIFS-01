@@ -1,0 +1,1 @@
+//firstName, lastName, age, contactNumber, gender, symptoms, email

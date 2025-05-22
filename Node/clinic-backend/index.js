@@ -16,7 +16,7 @@ const patientRoutes = require('./routes/PatientRoutes');
 
 
 app.use('/api/doctor', doctorRoutes);
-// app.use('/api/receptionist', receptionistRoutes);
+app.use('/api/receptionist', receptionistRoutes);
 // app.use('/api/patient', patientRoutes);
 
 const PORT = process.env.PORT || 8000;
