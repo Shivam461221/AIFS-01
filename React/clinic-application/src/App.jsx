@@ -15,6 +15,7 @@ import { Route, Routes } from 'react-router-dom'
 import Login from './components/Login'
 import Dashboard from './components/Dashboard'
 import DoctorsList from './components/DoctorsList'
+import Protected from './components/Protected'
 
 function App() {
   return (
@@ -29,7 +30,7 @@ function App() {
         <Route path={"/testimonial"} element={<Testimonial />} />
         <Route path={"/contact"} element={<Contact />} />
         <Route path='/login' element={<Login/>} />
-        <Route path='/dashboard' element={<Dashboard/>} />
+        <Route path='/dashboard' element={<Protected><Dashboard/></Protected>} />
         <Route path='/doctorsList' element={<DoctorsList/>} />
       </Routes>
       <Footer />

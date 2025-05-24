@@ -8,7 +8,7 @@ export default function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
-    const {token, setToken} = useContext(AuthContext);
+    const {setToken, setUser} = useContext(AuthContext);
 
     const login = async (e) => {
         e.preventDefault();
@@ -16,8 +16,10 @@ export default function Login() {
             let response = await axios.post('http://localhost:8000/api/doctor/login', { email, password });
             if (response && response.data.token) {
                 setToken(response.data.token);
+                setUser(response.data)
                 navigate('/dashboard');
-                console.log(response.data);
+                // console.log(response.data);
+                //console.log(user.doctor.role);
             }
             else {
                 navigate('/');

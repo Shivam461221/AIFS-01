@@ -2,108 +2,124 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 import { useContext } from "react";
 
-export default function Header(){
+export default function Header() {
     const navigate = useNavigate();
     // const token = localStorage.getItem('token');
-     const {token, setToken} = useContext(AuthContext);
-    
-    const logout =()=>{
+    const { token, user } = useContext(AuthContext);
+
+    const logout = () => {
         setToken('');
-       navigate('/');
+        navigate('/');
     }
-    return(
+    return (
         <>
-            <header className="header_section">
-                    <div className="header_top">
-                        <div className="container">
-                            <div className="contact_nav">
-                                <a href="">
-                                    <i className="fa fa-phone" aria-hidden="true"></i>
-                                    <span>
-                                        Call : +01 123455678990
-                                    </span>
-                                </a>
-                                <a href="">
-                                    <i className="fa fa-envelope" aria-hidden="true"></i>
-                                    <span>
-                                        Email : demo@gmail.com
-                                    </span>
-                                </a>
-                                <a href="">
-                                    <i className="fa fa-map-marker" aria-hidden="true"></i>
-                                    <span>
-                                        Location
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="header_bottom">
-                        <div className="container-fluid">
-                            <nav className="navbar navbar-expand-lg custom_nav-container ">
-                                <a className="navbar-brand" href="index.html">
-                                    <img src="images/logo.png" alt="" />
-                                </a>
-                                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                    <span className=""> </span>
-                                </button>
+      <header className="header_section">
+        <div className="header_top">
+          <div className="container">
+            <div className="contact_nav">
+              <a href="#">
+               
+                <i className="fa fa-phone" aria-hidden="true"></i>
+                <span>Call : +01 123455678990</span>
+              </a>
+              <a href="#">
+                <i className="fa fa-envelope" aria-hidden="true"></i>
+                <span>Email : demo@gmail.com</span>
+              </a>
+              <a href="#">
+                <i className="fa fa-map-marker" aria-hidden="true"></i>
+                <span>Location</span>
+              </a>
+            </div>
+          </div>
+        </div>
 
-                                <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                                    <div className="d-flex mr-auto flex-column flex-lg-row align-items-center">
-                                        <ul className="navbar-nav  ">
-                                            <li className="nav-item active">
-                                                <Link to={'/'} className="nav-link" >Home</Link>
-                                            </li>
-                                            <li className="nav-item">
-                                                
-                                                <Link to={'/about'} className="nav-link" >About</Link>
-                                            </li>
-                                            <li className="nav-item">
-                                                
-                                                <Link to={'/treatment'} className="nav-link" >Treatment</Link>
-                                            </li>
-                                            <li className="nav-item">
-                                                
-                                                <Link to={'/doctors'} className="nav-link" >Doctors</Link>
-                                            </li>
-                                            <li className="nav-item">
-                                                
-                                                <Link to={'/testimonial'} className="nav-link" >Testimonial</Link>
-                                            </li>
-                                                <li className="nav-item">
-                                                <Link to={'/contact'} className="nav-link" >Contact</Link>
-                                            </li>
-                                            <li className="nav-item">
-                                                <Link to={'/doctorsList'} className="nav-link" >Doctors</Link>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div className="quote_btn-container">
-                                        
-                                        <i className="fa fa-user" aria-hidden="true"></i>
-                                            {
-                                                (token) ? <span> <button onClick={()=>logout()} className="btn btn-danger">Logout</button></span>: <span><Link to={'/login'} >Login</Link></span>
+        <div className="header_bottom">
+          <div className="container-fluid">
+            <nav className="navbar navbar-expand-lg custom_nav-container">
+              <Link className="navbar-brand" to="/">
+                <img src="images/logo.png" alt="Logo" />
+              </Link>
+              <button
+                className="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span className=""></span>
+              </button>
 
-                                            }
-                                             <i className="fa fa-user" aria-hidden="true"></i>
-                                            <span>
-                                                {
-                                                (token) ? '': <span><Link to={'/login'} >Sign Up</Link></span>
+              <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                <div className="d-flex mr-auto flex-column flex-lg-row align-items-center">
+                  <ul className="navbar-nav">
+                    {token && user?.doctor ? (
+                      <>
+                        <li className="nav-item active">
+                          <Link to="/" className="nav-link">Receptionist</Link>
+                        </li>
+                        <li className="nav-item">
+                          <Link to="/about" className="nav-link">Appointment</Link>
+                        </li>
+                        <li className="nav-item">
+                          <Link to="/treatment" className="nav-link">Profile</Link>
+                        </li>
+                      </>
+                    ) : (
+                      <>
+                        <li className="nav-item active">
+                          <Link to="/" className="nav-link">Home</Link>
+                        </li>
+                        <li className="nav-item">
+                          <Link to="/about" className="nav-link">About</Link>
+                        </li>
+                        <li className="nav-item">
+                          <Link to="/treatment" className="nav-link">Treatment</Link>
+                        </li>
+                        <li className="nav-item">
+                          <Link to="/doctors" className="nav-link">Doctors</Link>
+                        </li>
+                        <li className="nav-item">
+                          <Link to="/testimonial" className="nav-link">Testimonial</Link>
+                        </li>
+                        <li className="nav-item">
+                          <Link to="/contact" className="nav-link">Contact</Link>
+                        </li>
+                      </>
+                    )}
+                  </ul>
+                </div>
 
-                                            }
-                                            </span>
-                                        
-                                        <form className="form-inline">
-                                            <button className="btn  my-2 my-sm-0 nav_search-btn" type="submit">
-                                                <i className="fa fa-search" aria-hidden="true"></i>
-                                            </button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </nav>
-                        </div>
-                    </div>
-                </header>
-        </>
+                <div className="quote_btn-container">
+                  <i className="fa fa-user" aria-hidden="true"></i>
+                  {token ? (
+                    <span>
+                      <button onClick={logout} className="btn btn-danger">Logout</button>
+                    </span>
+                  ) : (
+                    <>
+                      <span>
+                        <Link to="/login">Login</Link>
+                      </span>
+                      <span>
+                        <Link to="/signup">Sign Up</Link>
+                      </span>
+                    </>
+                  )}
+
+                  <form className="form-inline">
+                    <button className="btn my-2 my-sm-0 nav_search-btn" type="submit">
+                      <i className="fa fa-search" aria-hidden="true"></i>
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </header>
+    </>
     )
 }
