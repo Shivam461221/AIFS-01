@@ -14,6 +14,8 @@ const doctorRoutes = require('./routes/DoctorRoutes');
 const receptionistRoutes = require('./routes/ReceptionistRoutes');
 const patientRoutes = require('./routes/PatientRoutes');
 
+app.use(cors());
+
 
 app.use('/api/doctor', doctorRoutes);
 app.use('/api/receptionist', receptionistRoutes);

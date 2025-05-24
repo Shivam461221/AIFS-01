@@ -29,6 +29,12 @@ async function handleReceptionistLogin(req, res){
     }
 }
 
+//register a patient
+
+//delete patient
+
+//update patient
+
 module.exports = {
     handleReceptionistLogin
 }

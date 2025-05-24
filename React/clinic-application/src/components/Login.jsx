@@ -1,18 +1,21 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../context/AuthContext";
+
 
 export default function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
+    const {token, setToken} = useContext(AuthContext);
 
     const login = async (e) => {
         e.preventDefault();
         try {
-            let response = await axios.post('http://localhost:8000/api/auth/login', { email, password });
+            let response = await axios.post('http://localhost:8000/api/doctor/login', { email, password });
             if (response && response.data.token) {
-                localStorage.setItem('token', response.data.token);
+                setToken(response.data.token);
                 navigate('/dashboard');
                 console.log(response.data);
             }
@@ -21,12 +24,11 @@ export default function Login() {
             }
         }
         catch (error) {
-            console.log(error);
+            console.log(error.message);
         }
     }
     return (
-        <>
-            <section className="book_section layout_padding">
+        <> <section className="book_section layout_padding">
                 <div className="container">
                     <div className="row">
                         <div className="col">

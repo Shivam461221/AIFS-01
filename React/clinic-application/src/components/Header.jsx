@@ -1,12 +1,15 @@
 import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../context/AuthContext";
+import { useContext } from "react";
 
 export default function Header(){
     const navigate = useNavigate();
-    const token = localStorage.getItem('token');
-
+    // const token = localStorage.getItem('token');
+     const {token, setToken} = useContext(AuthContext);
+    
     const logout =()=>{
-        localStorage.removeItem('token')
-        navigate('/');
+        setToken('');
+       navigate('/');
     }
     return(
         <>
@@ -41,8 +44,6 @@ export default function Header(){
                                 <a className="navbar-brand" href="index.html">
                                     <img src="images/logo.png" alt="" />
                                 </a>
-
-
                                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                     <span className=""> </span>
                                 </button>
@@ -51,57 +52,47 @@ export default function Header(){
                                     <div className="d-flex mr-auto flex-column flex-lg-row align-items-center">
                                         <ul className="navbar-nav  ">
                                             <li className="nav-item active">
-                                                {/* <a className="nav-link" href="index.html">Home <span className="sr-only">(current)</span></a> */}
                                                 <Link to={'/'} className="nav-link" >Home</Link>
                                             </li>
                                             <li className="nav-item">
-                                                {/* <a className="nav-link" href="about.html"> About</a> */}
+                                                
                                                 <Link to={'/about'} className="nav-link" >About</Link>
                                             </li>
                                             <li className="nav-item">
-                                                {/* <a className="nav-link" href="treatment.html">Treatment</a> */}
+                                                
                                                 <Link to={'/treatment'} className="nav-link" >Treatment</Link>
                                             </li>
                                             <li className="nav-item">
-                                                {/* <a className="nav-link" href="doctor.html">Doctors</a> */}
+                                                
                                                 <Link to={'/doctors'} className="nav-link" >Doctors</Link>
                                             </li>
                                             <li className="nav-item">
-                                                {/* <a className="nav-link" href="testimonial.html">Testimonial</a> */}
+                                                
                                                 <Link to={'/testimonial'} className="nav-link" >Testimonial</Link>
                                             </li>
-                                           
                                                 <li className="nav-item">
-                                            
                                                 <Link to={'/contact'} className="nav-link" >Contact</Link>
-                                                   
                                             </li>
                                             <li className="nav-item">
                                                 <Link to={'/doctorsList'} className="nav-link" >Doctors</Link>
                                             </li>
-                                            
                                         </ul>
                                     </div>
                                     <div className="quote_btn-container">
-                                        {/* <a href="">
-                                            <i className="fa fa-user" aria-hidden="true"></i>
-                                            <span>
-                                                Login
-                                            </span>
-                                        </a> */}
                                         
                                         <i className="fa fa-user" aria-hidden="true"></i>
                                             {
                                                 (token) ? <span> <button onClick={()=>logout()} className="btn btn-danger">Logout</button></span>: <span><Link to={'/login'} >Login</Link></span>
 
                                             }
-                                            
-                                        {/* <a href="">
-                                            <i className="fa fa-user" aria-hidden="true"></i>
+                                             <i className="fa fa-user" aria-hidden="true"></i>
                                             <span>
-                                                Sign Up
+                                                {
+                                                (token) ? '': <span><Link to={'/login'} >Sign Up</Link></span>
+
+                                            }
                                             </span>
-                                        </a> */}
+                                        
                                         <form className="form-inline">
                                             <button className="btn  my-2 my-sm-0 nav_search-btn" type="submit">
                                                 <i className="fa fa-search" aria-hidden="true"></i>
