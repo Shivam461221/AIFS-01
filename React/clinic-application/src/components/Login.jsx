@@ -13,10 +13,10 @@ export default function Login() {
     const login = async (e) => {
         e.preventDefault();
         try {
-            let response = await axios.post('http://localhost:8000/api/doctor/login', { email, password });
+            let response = await axios.post('http://localhost:8000/api/auth/login', { email, password });
             if (response && response.data.token) {
                 setToken(response.data.token);
-                setUser(response.data)
+                setUser(response.data.user)
                 navigate('/dashboard');
                 // console.log(response.data);
                 //console.log(user.doctor.role);

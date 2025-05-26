@@ -5,7 +5,7 @@ import { useContext } from "react";
 export default function Header() {
     const navigate = useNavigate();
     // const token = localStorage.getItem('token');
-    const { token, user } = useContext(AuthContext);
+    const { token, user, setToken } = useContext(AuthContext);
 
     const logout = () => {
         setToken('');
@@ -55,7 +55,7 @@ export default function Header() {
               <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <div className="d-flex mr-auto flex-column flex-lg-row align-items-center">
                   <ul className="navbar-nav">
-                    {token && user?.doctor ? (
+                    {token && user?.role==='doctor' ? (
                       <>
                         <li className="nav-item active">
                           <Link to="/" className="nav-link">Receptionist</Link>
@@ -64,7 +64,19 @@ export default function Header() {
                           <Link to="/about" className="nav-link">Appointment</Link>
                         </li>
                         <li className="nav-item">
-                          <Link to="/treatment" className="nav-link">Profile</Link>
+                          <Link to="/profile" className="nav-link">Profile</Link>
+                        </li>
+                      </>
+                    ) : token && user?.role==='receptionist' ? (
+                      <>
+                        <li className="nav-item active">
+                          <Link to="/" className="nav-link">Patient</Link>
+                        </li>
+                        <li className="nav-item">
+                          <Link to="/about" className="nav-link">Appointment</Link>
+                        </li>
+                        <li className="nav-item">
+                          <Link to="/profile" className="nav-link">Profile</Link>
                         </li>
                       </>
                     ) : (

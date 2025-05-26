@@ -13,6 +13,7 @@ app.use(bodyParser.json());
 const doctorRoutes = require('./routes/DoctorRoutes');
 const receptionistRoutes = require('./routes/ReceptionistRoutes');
 const patientRoutes = require('./routes/PatientRoutes');
+const authRoute = require('./routes/AuthRoute')
 
 app.use(cors());
 
@@ -20,6 +21,8 @@ app.use(cors());
 app.use('/api/doctor', doctorRoutes);
 app.use('/api/receptionist', receptionistRoutes);
 // app.use('/api/patient', patientRoutes);
+
+app.use('/api/auth', authRoute);
 
 const PORT = process.env.PORT || 8000;
 app.listen(PORT, ()=>{

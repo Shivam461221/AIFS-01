@@ -1,8 +1,10 @@
-export default function Book(){
+export default function Book() {
+    const bookAppointment = () => {
 
+    }
     return (
         <>
-        <section className="book_section layout_padding">
+            <section className="book_section layout_padding">
                 <div className="container">
                     <div className="row">
                         <div className="col">
@@ -45,9 +47,9 @@ export default function Book(){
                                         <label for="inputDate">Choose Date </label>
                                         <div className="input-group date" id="inputDate" data-date-format="mm-dd-yyyy">
                                             <input type="text" className="form-control" readonly />
-                                                <span className="input-group-addon date_icon">
-                                                    <i className="fa fa-calendar" aria-hidden="true"></i>
-                                                </span>
+                                            <span className="input-group-addon date_icon">
+                                                <i className="fa fa-calendar" aria-hidden="true"></i>
+                                            </span>
                                         </div>
                                     </div>
                                 </div>

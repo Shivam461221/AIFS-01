@@ -16,6 +16,7 @@ import Login from './components/Login'
 import Dashboard from './components/Dashboard'
 import DoctorsList from './components/DoctorsList'
 import Protected from './components/Protected'
+import Profile from './components/Profile'
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         <Route path='/login' element={<Login/>} />
         <Route path='/dashboard' element={<Protected><Dashboard/></Protected>} />
         <Route path='/doctorsList' element={<DoctorsList/>} />
+        <Route path='/profile' element={<Profile/>} />
       </Routes>
       <Footer />
 
